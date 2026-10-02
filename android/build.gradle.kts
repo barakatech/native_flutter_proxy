@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 val kotlinVersion: String by project
 
 plugins {
@@ -25,10 +27,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
-    }
-
     sourceSets["main"].java.srcDirs("src/main/kotlin")
 
     defaultConfig {
@@ -38,6 +36,12 @@ android {
 
     lint {
         disable.add("InvalidPackage")
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
     }
 }
 
