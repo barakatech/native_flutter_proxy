@@ -23,4 +23,4 @@ flutter:
         package: com.victorblaess.native_flutter_proxy
         pluginClass: FlutterProxyPlugin
       ios:
-        pluginClass: FlutterProxyPlugin
+        pluginClass: SwiftFlutterProxyPlugin
